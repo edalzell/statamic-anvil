@@ -3,6 +3,7 @@
     "type": "statamic-addon",
     "license": "MIT",
     "require": {
+        "php": "^7.4",
         "themsaid/forge-sdk": "^2.0",
         "pixelfear/composer-dist-plugin": "^0.1.2"
     },
