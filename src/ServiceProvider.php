@@ -2,16 +2,18 @@
 
 namespace Edalzell\Anvil;
 
+use Edalzell\Anvil\Http\Controllers\Actions\DeploymentLogController;
+use Edalzell\Anvil\Http\Controllers\Actions\DeploySiteController;
+use Edalzell\Anvil\Http\Controllers\SiteController;
 use Statamic\Facades\Utility;
 use Statamic\Providers\AddonServiceProvider;
-use Edalzell\Anvil\Http\Controllers\SiteController;
-use Edalzell\Anvil\Http\Controllers\Actions\DeploySiteController;
-use Edalzell\Anvil\Http\Controllers\Actions\DeploymentLogController;
 
 class ServiceProvider extends AddonServiceProvider
 {
+    protected $publishAfterInstall = false;
+
     protected $scripts = [
-        __DIR__.'/resources/js/cp.js',
+        __DIR__.'/../resources/js/cp.js',
     ];
 
     public function boot()
