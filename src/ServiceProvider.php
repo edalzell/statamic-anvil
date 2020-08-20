@@ -10,22 +10,19 @@ use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    protected $publishAfterInstall = false;
-
     protected $scripts = [
-        __DIR__.'/../resources/js/cp.js',
+        __DIR__.'/../dist/js/cp.js',
     ];
 
     public function boot()
     {
         parent::boot();
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'anvil');
+        $this->bootNav();
+    }
 
-        $this->publishes([
-            __DIR__.'/../config/anvil.php' => config_path('anvil.php'),
-        ]);
-
+    private function bootNav()
+    {
         $utility = Utility::make('anvil')
             ->action(SiteController::class)
             ->icon('hammer-wrench')
