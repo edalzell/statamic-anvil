@@ -2,8 +2,8 @@
 
 namespace Edalzell\Anvil\Http\Controllers;
 
-use Themsaid\Forge\Forge;
-use Themsaid\Forge\Resources\Site;
+use Laravel\Forge\Forge;
+use Laravel\Forge\Resources\Site;
 use Statamic\Http\Controllers\Controller;
 
 abstract class BaseController extends Controller
