@@ -13,7 +13,10 @@ abstract class BaseController extends Controller
 
     public function __construct()
     {
-        $this->forge = new Forge(config('anvil.forge.token'));
+        if (! $token = config('anvil.forge.token')) {
+            return;
+        }
+        $this->forge = new Forge($token);
 
         $this->site = $this->forge->site(config('anvil.forge.server'), config('anvil.forge.site'));
     }
