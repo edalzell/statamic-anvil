@@ -4,7 +4,7 @@
     "type": "statamic-addon",
     "license": "MIT",
     "require": {
-        "php": "^^8.0",
+        "php": "^8.0",
         "laravel/framework": "^8.40",
         "pixelfear/composer-dist-plugin": "^0.1.2",
         "statamic/cms": "^3.1",
