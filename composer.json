@@ -4,10 +4,10 @@
     "type": "statamic-addon",
     "license": "MIT",
     "require": {
-        "php": "^7.4 || ^8.0",
-        "laravel/framework": "^7.30.3 || ^8.40",
+        "php": "^^8.0",
+        "laravel/framework": "^8.40",
         "pixelfear/composer-dist-plugin": "^0.1.2",
-        "statamic/cms": "^3.0",
+        "statamic/cms": "^3.1",
         "laravel/forge-sdk": "^3.0"
     },
     "autoload": {
